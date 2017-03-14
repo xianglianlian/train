@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- struts.xml中修改系统默认配置 -->
+	<constant name="struts.devMode" value="false"/>
+	<constant name="struts.ui.theme" value="simple"/>
+	<constant name="struts.locale" value="zh_CN"/>
+	<constant name="struts.custom.i18n.resources" value="com.myproject.resouces.info"/>
+																			 
+	<package name="com.train" extends="json-default">
+		<action name="trainAction_*" method="{1}" class="trainAction">
+			<result name="trainlist" type="json">
+				<param name="includeProperties">trainList.*</param>
+			</result>
+			<result name="add">/addtrian.jsp</result>
+			<result name="index" type="redirect">/index.jsp</result>
+			<result name="error" type="redirect">/error.jsp</result>
+		</action>
+		
+	</package>
+</struts>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
